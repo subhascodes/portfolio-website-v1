@@ -113,7 +113,7 @@ export default function Portfolio() {
     {
       title: "Portfolio Website",
       description:
-        "A modern, responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS, featuring a component-based architecture and custom hooks to showcase projects and skills.(Yes,this one!",
+        "A modern, responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS, featuring a component-based architecture and custom hooks to showcase projects and skills.(Yes,this one!)",
       image: "/placeholder.svg?height=300&width=400",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
       github: "#",
