@@ -111,11 +111,11 @@ export default function Portfolio() {
       live: "#",
     },
     {
-      title: "AI-Powered Analytics Dashboard",
+      title: "Portfolio Website",
       description:
-        "An intelligent analytics dashboard that provides insights using machine learning algorithms and beautiful data visualizations.",
+        "A modern, responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS, featuring a component-based architecture and custom hooks to showcase projects and skills.(Yes,this one!",
       image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Python", "React", "TensorFlow", "D3.js"],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
       github: "#",
       live: "#",
     },
