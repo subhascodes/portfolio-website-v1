@@ -1,4 +1,5 @@
 "use client" 
+import StarsBG from '../components/starsBG' // adjust the path if needed
 import { Typewriter } from 'react-simple-typewriter'
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
@@ -141,14 +142,9 @@ export default function Portfolio() {
   return (
     <div className="pt-4">
     <div className="min-h-screen bg-black text-white light:bg-gray-50 light:text-gray-900 transition-all duration-300 relative overflow-x-hidden">
+    <StarsBG />
     <div className="relative min-h-screen bg-black">
-      {/*Background Canvas
-      <div className="fixed inset-0 -z-50 pointer-events-none">
-      <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>
-      <color attach="background" args={['#000']} />
-      <NetworkBackground />
-    </Canvas>
-    </div> */}
+
 
       {/* Subtle Background */}
     <div className="fixed inset-0 -z-10 pointer-events-none">
@@ -244,17 +240,6 @@ export default function Portfolio() {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-gray-300 group-hover:w-full transition-all duration-300"></span>
                 </button>
               ))}
-              <button
-                onClick={toggleTheme}
-                className="ml-4 p-2 rounded-full glass-morphism hover:scale-105 transition-all duration-300"
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? (
-                  <Star className="w-5 h-5 metallic-gold-text" />
-                ) : (
-                  <Sparkles className="w-5 h-5 metallic-silver-text" />
-                )}
-              </button>
             </div>
 
             {/* Mobile Navigation Toggle */}
@@ -280,22 +265,7 @@ export default function Portfolio() {
                   {item}
                 </button>
               ))}
-              <button
-                onClick={toggleTheme}
-                className="flex items-center w-full text-left text-white hover:metallic-gold-text transition-all duration-300"
-              >
-                {theme === "dark" ? (
-                  <>
-                    <Star className="w-5 h-5 mr-2" />
-                    Light Mode
-                  </>
-                ) : (
-                  <>
-                    <Sparkles className="w-5 h-5 mr-2" />
-                    Dark Mode
-                  </>
-                )}
-              </button>
+              
             </div>
           </div>
         )}
@@ -391,7 +361,6 @@ List of ideas keeps growing, and hence the building (and learning) has just begu
       <section id="projects" className="py-20 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="metallic-silver-text">Featured</span>
             <span className="mx-4 metallic-gold-text">Projects</span>
           </h2>
 
@@ -432,14 +401,7 @@ List of ideas keeps growing, and hence the building (and learning) has just begu
                         className="flex items-center text-gray-400 hover:metallic-gold-text transition-all duration-300 text-sm hover:scale-105"
                       >
                         <Github size={16} className="mr-1" />
-                        Code
-                      </a>
-                      <a
-                        href={project.live}
-                        className="flex items-center text-gray-400 hover:metallic-silver-text transition-all duration-300 text-sm hover:scale-105"
-                      >
-                        <ExternalLink size={16} className="mr-1" />
-                        Live Demo
+                        View Repo
                       </a>
                     </div>
                   </div>
@@ -448,11 +410,11 @@ List of ideas keeps growing, and hence the building (and learning) has just begu
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          {/*<div className="text-center mt-12">
             <Button className="glass-morphism metallic-border hover:scale-105 px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300">
               View All Projects
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
