@@ -1,4 +1,6 @@
 "use client" 
+import { projects } from "../components/projectsData";
+import ProjectCard from "../components/ProjectCard";
 import StarsBG from '../components/starsBG' // adjust the path if needed
 import { Typewriter } from 'react-simple-typewriter'
 import { useState, useEffect, useRef } from "react"
@@ -99,8 +101,7 @@ export default function Portfolio() {
         "An AI-powered desktop app that predicts loan approval using real applicant data, machine learning (Python, scikit-learn), and a user-friendly Electron JS interface.",
       image: "/placeholder.svg?height=300&width=400",
       technologies: ["Electron JS", "Python", "scikit-learn", "matplotlib"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/subhascodes/loan-eligibility-app",
     },
     {
       title: "SkillForge",
@@ -108,8 +109,8 @@ export default function Portfolio() {
         "A gamified platform to learn coding, where I developed the AI/ML engine powering personalized learning roadmap generation using Google Gemini AI, with backend integration in Python and MongoDB.",
       image: "/placeholder.svg?height=300&width=400",
       technologies: ["Google Gemini AI", "Python", "MongoDB", "Next.js", "TypeScript"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/subhascodes/skillforge",
+
     },
     {
       title: "Portfolio Website",
@@ -117,8 +118,7 @@ export default function Portfolio() {
         "A modern, responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS, featuring a component-based architecture and custom hooks to showcase projects and skills.(Yes,this one!)",
       image: "/placeholder.svg?height=300&width=400",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/subhascodes/portfolio-website",
     },
   ]
 
@@ -359,64 +359,29 @@ List of ideas keeps growing, and hence the building (and learning) has just begu
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="mx-4 metallic-gold-text">Projects</span>
-          </h2>
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+      <span className="mx-4 metallic-gold-text">Projects</span>
+    </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="glass-morphism metallic-border hover:scale-105 transition-all duration-300 group overflow-hidden"
-              >
-                <CardContent className="p-0">
-                  <div className="relative overflow-hidden">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      width={400}
-                      height={300}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
+    <div className="flex flex-col items-center space-y-10 w-full">
+  {projects.map((project, idx) => (
+    <ProjectCard
+      key={idx}
+      title={project.title}
+      description={Array.isArray(project.description) ? project.description : [project.description]}
+      tech={project.technologies}
+      github={project.github}
+      image={project.image}
+      index={idx}
+    />
+  ))}
+    </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 metallic-gold-text">{project.title}</h3>
-                    <p className="text-gray-300 light:text-gray-600 mb-4 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech) => (
-                        <Badge key={tech} className="glass-morphism text-xs px-2 py-1 border-yellow-400/20">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
+  </div>
+</section>
 
-                    <div className="flex space-x-4">
-                      <a
-                        href={project.github}
-                        className="flex items-center text-gray-400 hover:metallic-gold-text transition-all duration-300 text-sm hover:scale-105"
-                      >
-                        <Github size={16} className="mr-1" />
-                        View Repo
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
 
-          {/*<div className="text-center mt-12">
-            <Button className="glass-morphism metallic-border hover:scale-105 px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300">
-              View All Projects
-            </Button>
-          </div> */}
-        </div>
-      </section>
 
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 relative z-10">

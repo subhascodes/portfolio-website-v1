@@ -216,3 +216,24 @@
   100% { background-position: -200% 0; }
 }
 
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: #FFD700;
+    box-shadow: 0 0 5px #FFD700;
+  }
+  50% {
+    border-color: #FFA500;
+    box-shadow: 0 0 10px #FFA500;
+  }
+}
+
+.animate-border {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+.vertical-email {
+  /* Optional: add more spacing between letters if you want */
+  letter-spacing: 0.3em;
+}
+
+
