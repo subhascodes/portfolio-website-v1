@@ -169,60 +169,18 @@ export default function Portfolio() {
       <nav className="fixed top-0 left-0 right-0 w-full z-50 glass-morphism border-b border-yellow-400/10 light:border-gray-300/20">
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-1">
-            {/* Left Dropdown Menu */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center space-x-3 glass-morphism px-4 py-2 rounded-full hover:scale-105 transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-full metallic-border overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=40&width=40"
-                    alt="Subhasmita"
-                    width={40}
-                    height={40}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
-                />
-              </button>
+          <div className="flex justify-between items-center py-0.5">
 
-              {/* Dropdown Menu */}
-              {isDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 glass-morphism rounded-xl border border-yellow-400/20 light:border-gray-300/30 overflow-hidden">
-                  {/* Contact Section */}
-                  <div className="p-6">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <MessageCircle className="w-4 h-4 metallic-silver-text" />
-                      <h3 className="font-semibold metallic-silver-text">Contact</h3>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-3">
-                        <Mail className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm text-gray-300 light:text-gray-600">subhasmita@example.com</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <Github className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm text-gray-300 light:text-gray-600">github.com/subhasmita</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <Linkedin className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm text-gray-300 light:text-gray-600">linkedin.com/in/subhasmita</span>
-                      </div>
-                    </div>
-                    <Button
-                      onClick={() => scrollToSection("contact")}
-                      className="w-full mt-4 metallic-gold text-black hover:scale-105 transition-all duration-300"
-                    >
-                      Get In Touch
-                    </Button>
-                  </div>
-                </div>
-              )}
-            </div>
+          <div className="w-12 h-12 rounded-full border border-yellow-400 overflow-hidden mr-4 my-2">
+  <Image
+    src="/sneha.png"
+    alt="Subhasmita"
+    width={48}
+    height={48}
+    className="w-full h-full object-cover rounded-full"
+  />
+</div>
+  
 
             {/* Center Logo */}
 
@@ -240,6 +198,15 @@ export default function Portfolio() {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-gray-300 group-hover:w-full transition-all duration-300"></span>
                 </button>
               ))}
+              {/*Resume Button */}
+              <a
+    href="https://drive.google.com/file/d/1Z4oB_ezqnJgqBGcIGb_sobArIEk7XUfO/view?usp=drivesdk"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="capitalize transition-all duration-300 hover:scale-105 relative text-white light:text-gray-900"
+  >
+    Resume
+  </a>
             </div>
 
             {/* Mobile Navigation Toggle */}
@@ -269,7 +236,7 @@ export default function Portfolio() {
             </div>
           </div>
         )}
-        <div className="absolute left-0 bottom-0 w-full h-1 overflow-hidden pointer-events-none rounded-b-2xl">
+        <div className="absolute left-0 bottom-0 w-full h-0.5 overflow-hidden pointer-events-none rounded-b-2xl">
   <div className="moving-gold-bar h-full w-full"></div>
 </div>
       </nav>
@@ -334,7 +301,7 @@ List of ideas keeps growing, and hence the building (and learning) has just begu
             </Button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="glass-morphism metallic-border hover:scale-105 px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300"
+              className="px-8 py-3 border border-yellow-400 text-white bg-transparent rounded-full hover:bg-yellow-400 hover:text-black transition-all duration-300"
             >
               Get In Touch
             </Button>

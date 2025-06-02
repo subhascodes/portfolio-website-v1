@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
 }) => (
   <motion.div
-    className="relative bg-black border border-yellow-400 rounded-xl p-6 w-full max-w-xl min-h-[420px] flex flex-col animate-border mx-auto shadow-lg hover:shadow-2xl transition-shadow duration-300"
+    className="relative bg-black border border-yellow-400 rounded-xl p-6 w-full max-w-xl min-h-[420px] flex flex-col animate-border mx-auto shadow-lg"
     initial={{
       opacity: 0,
       x: index % 2 === 0 ? -100 : 100, // Alternate from left and right
