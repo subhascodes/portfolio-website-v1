@@ -242,7 +242,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section */} 
-      <section id="home" className="min-h-screen flex items-center justify-center relative z-10">
+      <section id="home" className="min-h-screen flex items-center justify-center relative z-10 mt-8">
         <div className="text-center px-4 floating-animation">
           {/*
           <div className="mb-8">
@@ -271,12 +271,10 @@ export default function Portfolio() {
             <span className="metallic-gold-text">UI/UX Designer</span>
           </p> */}
 
-          <p className="text-lg text-gray-400 light:text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Hi, I'm a full stack developer who loves building everything from backend logic to interactive front ends.
-I’m passionate about AI/ML with a few hands-on projects.
-List of ideas keeps growing, and hence the building (and learning) has just begun.
+          <p className="text-lg text-gray-400 light:text-gray-500 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Hi there. Consider me a 20-year-old sapien who codes, builds, breaks things (and learns from it). Currently, I’m into AI-ML and web dev too. DSA interests me as much as Rohit Sharma’s sixes—yet I feel it’s not mutual (DSA doesn’t love me back). And yes, I’m beginning because it’s just the start of the things I’ve decided to achieve.
           </p>
-          <p className="text-lg text-gray-400 light:text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-400 light:text-gray-500 mb-10 max-w-3xl mx-auto leading-relaxed">
   What more?&nbsp;
   <span className="text-yellow-500 font-semibold">
     I{' '}
@@ -292,7 +290,7 @@ List of ideas keeps growing, and hence the building (and learning) has just begu
   </span>
 </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10">
             <Button
               onClick={() => scrollToSection("projects")}
               className="metallic-gold text-black hover:scale-105 px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300"
@@ -307,25 +305,12 @@ List of ideas keeps growing, and hence the building (and learning) has just begu
             </Button>
           </div>
 
-          <div className="flex justify-center space-x-6">
-            <a href="#" className="text-gray-400 hover:metallic-gold-text hover:scale-110 transition-all duration-300">
-              <Github size={24} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:metallic-silver-text hover:scale-110 transition-all duration-300"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a href="#" className="text-gray-400 hover:metallic-gold-text hover:scale-110 transition-all duration-300">
-              <Mail size={24} />
-            </a>
-          </div>
+
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 relative z-10">
+      <section id="projects" className="py-3 px-4 relative z-10">
   <div className="max-w-6xl mx-auto">
     <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
       <span className="mx-4 metallic-gold-text">Projects</span>
