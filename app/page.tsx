@@ -337,48 +337,32 @@ export default function Portfolio() {
 
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="metallic-gold-text">Tech</span>
-            <span className="mx-4 metallic-silver-text">Stack</span>
-          </h2>
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+      <span className="metallic-gold-text">Tech</span>
+      <span className="mx-4 metallic-silver-text">Stack</span>
+    </h2>
+    <div className="animate-gold-border tech-stack-container">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" title="C" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" title="Tailwind CSS" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" title="AWS" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" title="Vercel" className="tech-icon bg-white rounded" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" className="tech-icon" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" title="Flask" className="tech-icon" />
+    </div>
+  </div>
+</section>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {[
-              { name: "React", icon: "⚛️" },
-              { name: "Next.js", icon: "▲" },
-              { name: "TypeScript", icon: "TS" },
-              { name: "Node.js", icon: "🟢" },
-              { name: "Python", icon: "🐍" },
-              { name: "JavaScript", icon: "JS" },
-              { name: "HTML5", icon: "🌐" },
-              { name: "CSS3", icon: "🎨" },
-              { name: "Tailwind", icon: "💨" },
-              { name: "MongoDB", icon: "🍃" },
-              { name: "PostgreSQL", icon: "🐘" },
-              { name: "Git", icon: "📝" },
-              { name: "Docker", icon: "🐳" },
-              { name: "AWS", icon: "☁️" },
-              { name: "Figma", icon: "🎯" },
-              { name: "Vue.js", icon: "💚" },
-              { name: "GraphQL", icon: "◈" },
-              { name: "Redux", icon: "🔄" },
-            ].map((tech, index) => (
-              <Card
-                key={index}
-                className="glass-morphism metallic-border hover:scale-110 transition-all duration-300 group p-6 text-center"
-              >
-                <CardContent className="p-0">
-                  <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">
-                    {tech.icon}
-                  </div>
-                  <h3 className="text-sm font-medium metallic-gold-text">{tech.name}</h3>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 relative z-10">
@@ -478,3 +462,4 @@ export default function Portfolio() {
     </div>
   )
 }
+
