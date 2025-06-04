@@ -1,4 +1,5 @@
 "use client" 
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import { projects } from "../components/projectsData";
 import ProjectCard from "../components/ProjectCard";
 import StarsBG from '../components/starsBG' // adjust the path if needed
@@ -48,6 +49,15 @@ export default function Portfolio() {
     document.addEventListener("mousedown", handleClickOutside)
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
+
+  const [text] = useTypewriter({
+  words: ['write.', 'emcee.', 'read.', 'dance.', 'run marathons.'],
+  loop: true,
+  typeSpeed: 80,
+  deleteSpeed: 50,
+  delaySpeed: 1200,
+})
+
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark"
@@ -277,18 +287,11 @@ export default function Portfolio() {
           <p className="text-lg text-gray-400 light:text-gray-500 mb-10 max-w-3xl mx-auto leading-relaxed">
   What more?&nbsp;
   <span className="text-yellow-500 font-semibold">
-    I{' '}
-    <Typewriter
-      words={['write.', 'emcee.', 'read.', 'dance.', 'run marathons.']}
-      loop={0}
-      cursor
-      cursorStyle="|"
-      typeSpeed={80}
-      deleteSpeed={50}
-      delaySpeed={1200}
-    />
+    I {text}
+    <Cursor cursorStyle="|" />
   </span>
 </p>
+
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10">
             <Button
@@ -350,10 +353,10 @@ export default function Portfolio() {
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" className="tech-icon" />
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" className="tech-icon" />
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" className="tech-icon" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" title="Tailwind CSS" className="tech-icon" />
+      <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS" title="Tailwind CSS" className="h-14 w-14 transition-transform duration-300 hover:-translate-y-2 cursor-pointer bg-black rounded" />
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL" className="tech-icon" />
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL" className="tech-icon" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" title="AWS" className="tech-icon" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" title="AWS" className="h-14 w-14 transition-transform duration-300 hover:-translate-y-2 cursor-pointer bg-black rounded" />
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" className="tech-icon" />
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" title="Vercel" className="tech-icon bg-white rounded" />
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" className="tech-icon" />
@@ -365,88 +368,76 @@ export default function Portfolio() {
 
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="metallic-gold-text">Get In</span>
-            <span className="mx-4 metallic-silver-text">Touch</span>
-          </h2>
+<section id="contact" className="py-10 px-4 relative z-10">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
+      <span className="metallic-gold-text">Get In</span>
+      <span className="mx-4 metallic-silver-text">Touch</span>
+    </h2>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold metallic-gold-text">Let's Work Together</h3>
-              <p className="text-gray-300 light:text-gray-600 leading-relaxed">
-                I'm always interested in new opportunities and exciting projects. Whether you have a question or just
-                want to say hi, I'll try my best to get back to you!
-              </p>
+    {/* Small message on top */}
+    <p className="text-center text-gray-300 light:text-gray-600 mb-12 max-w-2xl mx-auto">
+      I’m ready to build, learn, and create—so if you’ve got ideas or projects, count me in! Whether it’s a question or you just want to connect, I’m always happy to hear from you. Drop a message straight to my inbox and I’ll be in touch soon.
+    </p>
 
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Mail className="metallic-gold-text mr-4" size={20} />
-                  <span className="text-gray-300 light:text-gray-600">subhasmita@example.com</span>
-                </div>
-                <div className="flex items-center">
-                  <Github className="metallic-silver-text mr-4" size={20} />
-                  <span className="text-gray-300 light:text-gray-600">github.com/subhasmita</span>
-                </div>
-                <div className="flex items-center">
-                  <Linkedin className="metallic-gold-text mr-4" size={20} />
-                  <span className="text-gray-300 light:text-gray-600">linkedin.com/in/subhasmita</span>
-                </div>
-              </div>
+    {/* Centered form */}
+    <div className="flex justify-center">
+      <Card className="glass-morphism metallic-border p-6 w-full max-w-md">
+        <CardContent className="p-0">
+          <form className="space-y-6" action="https://formspree.io/f/mzzgzeqz" method="POST"> 
+            <div>
+              <Input
+                name="name"
+                placeholder="Your Name"
+                className="glass-morphism metallic-border focus:scale-105 transition-all duration-300 text-white placeholder-gray-400"
+              />
             </div>
-
-            <Card className="glass-morphism metallic-border p-6">
-              <CardContent className="p-0">
-                <form className="space-y-6">
-                  <div>
-                    <Input
-                      placeholder="Your Name"
-                      className="glass-morphism metallic-border focus:scale-105 transition-all duration-300 text-white placeholder-gray-400"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder="Your Email"
-                      className="glass-morphism metallic-border focus:scale-105 transition-all duration-300 text-white placeholder-gray-400"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      placeholder="Subject"
-                      className="glass-morphism metallic-border focus:scale-105 transition-all duration-300 text-white placeholder-gray-400"
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      placeholder="Your Message"
-                      rows={5}
-                      className="glass-morphism metallic-border focus:scale-105 transition-all duration-300 text-white placeholder-gray-400 resize-none"
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    className="w-full metallic-gold text-black hover:scale-105 py-3 font-semibold rounded-full transition-all duration-300"
-                  >
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+            <div>
+              <Input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                className="glass-morphism metallic-border focus:scale-105 transition-all duration-300 text-white placeholder-gray-400"
+              />
+            </div>
+            <div>
+              <Input
+                placeholder="Subject"
+                name="subject"
+                className="glass-morphism metallic-border focus:scale-105 transition-all duration-300 text-white placeholder-gray-400"
+              />
+            </div>
+            <div>
+              <Textarea
+                placeholder="Your Message"
+                name="message"
+                rows={5}
+                className="glass-morphism metallic-border focus:scale-105 transition-all duration-300 text-white placeholder-gray-400 resize-none"
+              />
+            </div>
+            <Button
+              type="submit"
+              className="w-full metallic-gold text-black hover:scale-105 py-3 font-semibold rounded-full transition-all duration-300"
+            >
+              Send Message
+            </Button>
+          </form>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
-      <footer className="border-t border-yellow-400/10 light:border-gray-300/20 py-8 px-4 relative z-10">
+      <footer>
         <div className="max-w-6xl mx-auto text-center">
-          <SubhasmitaLogo size="text-lg" />
           <p className="text-gray-400 light:text-gray-500 mt-4">
-            © {new Date().getFullYear()} Subhasmita. All rights reserved.
+            © {new Date().getFullYear()} Made with <span role="img" aria-label="heart hands">🫶</span> by Subhasmita
           </p>
         </div>
       </footer>
+      <div style={{ height: "40px" }}></div>
+
 
       {/* Scroll to Top Button */}
       {showScrollTop && (
