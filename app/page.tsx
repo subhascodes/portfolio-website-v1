@@ -3,7 +3,6 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import { projects } from "../components/projectsData";
 import ProjectCard from "../components/ProjectCard";
 import StarsBG from '../components/starsBG' // adjust the path if needed
-import { Typewriter } from 'react-simple-typewriter'
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -109,26 +108,26 @@ export default function Portfolio() {
       title: "Loan Eligibility Prediction App",
       description:
         "An AI-powered desktop app that predicts loan approval using real applicant data, machine learning (Python, scikit-learn), and a user-friendly Electron JS interface.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/loan-app.png",
       technologies: ["Electron JS", "Python", "scikit-learn", "matplotlib"],
-      github: "https://github.com/subhascodes/loan-eligibility-app",
+      github: "https://github.com/subhascodes/Loan-Eligibilty-App",
     },
     {
       title: "SkillForge",
       description:
         "A gamified platform to learn coding, where I developed the AI/ML engine powering personalized learning roadmap generation using Google Gemini AI, with backend integration in Python and MongoDB.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/skillforge.png",
       technologies: ["Google Gemini AI", "Python", "MongoDB", "Next.js", "TypeScript"],
-      github: "https://github.com/subhascodes/skillforge",
+      github: "https://github.com/subhascodes/SkillForge",
 
     },
     {
       title: "Portfolio Website",
       description:
         "A modern, responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS, featuring a component-based architecture and custom hooks to showcase projects and skills.(Yes,this one!)",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/portfolio.png",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
-      github: "https://github.com/subhascodes/portfolio-website",
+      github: "https://github.com/subhascodes/portfolio-website-v1",
     },
   ]
 
@@ -210,7 +209,7 @@ export default function Portfolio() {
               ))}
               {/*Resume Button */}
               <a
-    href="https://drive.google.com/file/d/1Z4oB_ezqnJgqBGcIGb_sobArIEk7XUfO/view?usp=drivesdk"
+    href="https://drive.google.com/file/d/1COSelYIjqh1mbwfquaIkZ3H-C0EL7MW3/view?usp=drive_link"
     target="_blank"
     rel="noopener noreferrer"
     className="capitalize transition-all duration-300 hover:scale-105 relative text-white light:text-gray-900"

@@ -24,6 +24,6 @@ export const projects = [
     ],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     github: "https://github.com/subhascodes/portfolio-website",
-    image: "/portfolio-site.png"
+    image: "/portfolio.png"
   }
 ]
