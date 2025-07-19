@@ -145,7 +145,7 @@ export default function Portfolio() {
         <span className="metallic-gold-text">t</span>
         <span className="metallic-silver-text">a</span>
       </div>
-    </div>
+    </div> 
   )
 
   return (
@@ -241,6 +241,15 @@ export default function Portfolio() {
                   {item}
                 </button>
               ))}
+              {/*Resume Button */}
+              <a
+    href="https://drive.google.com/file/d/1COSelYIjqh1mbwfquaIkZ3H-C0EL7MW3/view?usp=drive_link"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="capitalize transition-all duration-300 hover:scale-105 relative text-white light:text-gray-900"
+  >
+    Resume
+  </a>
               
             </div>
           </div>
